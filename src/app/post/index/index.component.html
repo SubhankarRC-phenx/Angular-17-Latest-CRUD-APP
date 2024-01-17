@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="text-center">Angular 17 Crud Application </h1>
+  <a href="#" routerLink="/post/create" class="btn btn-success">Create Post</a>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Post</th>
+        <th width="250px">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (post of posts; track post) {
+      <tr >
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.body}}</td>
+        <td>
+          <a href="#" [routerLink]="['/post/',post.id,'view']" class="btn btn-info me-2">View</a>
+          <a href="#" [routerLink]="['/post/',post.id,'edit']" class="btn btn-primary me-2">Edit</a>
+          <button class="btn btn-danger" type="button" (click)="deletePost(post.id)">Delete</button>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
