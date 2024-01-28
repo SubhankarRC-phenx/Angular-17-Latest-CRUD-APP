@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="text-center">Create New Post Here</h1>
+  <h1 class="text-center">Update Post Here</h1>
   <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
 
   <form [formGroup]="form" (ngSubmit)="submit()">
@@ -8,6 +8,7 @@
       <input
         type="text"
         id="title"
+        [(ngModel)]="post.title"
         formControlName="title"
         class="form-control"
       />
@@ -25,6 +26,7 @@
         type="text"
         id="body"
         formControlName="body"
+        [(ngModel)]="post.body"
         class="form-control"
       />
       <div
@@ -37,7 +39,7 @@
       </div>
     </div>
     <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
-      Submit
+      Update
     </button>
   </form>
 </div>
