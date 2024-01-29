@@ -1,1 +1,9 @@
-<p>view works!</p>
+<button
+  mat-raised-button
+  class="mt-3 ms-3"
+  (click)="(openDialog)"
+  routerLink="/view"
+  [queryParams]="{ feedback: 1 }"
+>
+  Open Dialog
+</button>

@@ -1,0 +1,131 @@
+<div class="d-flex align-items-center">
+  <div>{{ this.data.title }}</div>
+  <button
+    mat-icon-button
+    aria-label="Example icon button with a vertical three dot icon"
+    (click)="dialogClose()"
+    [routerLink]="'/view'"
+    [queryParams]=""
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div class="mb-2">
+  <button
+    class="ms-2"
+    mat-raised-button
+    routerLink="/about"
+    [queryParams]="{ feedback: 1 }"
+    [fragment]="'headerone'"
+    (click)="scrollToParagraph('paragraphOne')"
+  >
+    Headerone
+  </button>
+  <button
+    class="ms-2"
+    mat-raised-button
+    routerLink="/about"
+    [queryParams]="{ feedback: 1 }"
+    [fragment]="'headertwo'"
+    (click)="scrollToParagraph('paragraphTwo')"
+  >
+    Headertwo
+  </button>
+  <button
+    class="ms-2"
+    mat-raised-button
+    routerLink="/about"
+    [queryParams]="{ feedback: 1 }"
+    [fragment]="'headerthree'"
+    (click)="scrollToParagraph('paragraphThree')"
+  >
+    Headerthree
+  </button>
+</div>
+
+<!-- <div style="margin-top: 30px"></div> -->
+<div style="max-height: 35vh; overflow: auto; padding: 10px">
+  <br />
+  <span>
+    <p
+      style="text-decoration: none; cursor: pointer; font-size: 20px"
+      routerLink="/about"
+      [queryParams]="{ feedback: 1 }"
+      [fragment]="'headerone'"
+      (click)="scrollToParagraph('paragraphOne')"
+      #paragraphOne
+    >
+      Header one
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptatem
+      odio enim, harum ex debitis. Dignissimos, ratione. At quaerat, autem
+      facilis et, quidem neque beatae esse, alias nobis ratione animi. Lorem
+      ipsum dolor, sit amet consectetur adipisicing elit. Natus, harum impedit,
+      accusamus ipsam minus dolor officiis eum aliquid distinctio, quisquam
+      eveniet ducimus consequatur enim aperiam ad ut labore voluptas iste. Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Pariatur unde
+      consectetur est a quae cupiditate molestias minima alias accusantium
+      eveniet vero temporibus, cum architecto incidunt voluptate corporis eaque
+      inventore aliquid? Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Cum a ratione quod ex, excepturi ab omnis, veniam est laboriosam ut
+      officia adipisci, architecto nihil. Optio commodi velit ea provident
+      incidunt.
+    </p>
+  </span>
+  <span>
+    <p
+      style="text-decoration: none; cursor: pointer; font-size: 20px"
+      routerLink="/about"
+      [queryParams]="{ feedback: 1 }"
+      [fragment]="'headertwo'"
+      (click)="scrollToParagraph('paragraphTwo')"
+      #paragraphTwo
+    >
+      Header two
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptatem
+      odio enim, harum ex debitis. Dignissimos, ratione. At quaerat, autem
+      facilis et, quidem neque beatae esse, alias nobis ratione animi. Lorem
+      ipsum dolor, sit amet consectetur adipisicing elit. Natus, harum impedit,
+      accusamus ipsam minus dolor officiis eum aliquid distinctio, quisquam
+      eveniet ducimus consequatur enim aperiam ad ut labore voluptas iste. Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Pariatur unde
+      consectetur est a quae cupiditate molestias minima alias accusantium
+      eveniet vero temporibus, cum architecto incidunt voluptate corporis eaque
+      inventore aliquid? Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Cum a ratione quod ex, excepturi ab omnis, veniam est laboriosam ut
+      officia adipisci, architecto nihil. Optio commodi velit ea provident
+      incidunt.
+    </p>
+  </span>
+  <span>
+    <p
+      style="text-decoration: none; cursor: pointer; font-size: 20px"
+      routerLink="/about"
+      [queryParams]="{ feedback: 1 }"
+      [fragment]="'headerthree'"
+      (click)="scrollToParagraph('paragraphThree')"
+      #paragraphThree
+    >
+      Header three
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptatem
+      odio enim, harum ex debitis. Dignissimos, ratione. At quaerat, autem
+      facilis et, quidem neque beatae esse, alias nobis ratione animi. Lorem
+      ipsum dolor, sit amet consectetur adipisicing elit. Natus, harum impedit,
+      accusamus ipsam minus dolor officiis eum aliquid distinctio, quisquam
+      eveniet ducimus consequatur enim aperiam ad ut labore voluptas iste. Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Pariatur unde
+      consectetur est a quae cupiditate molestias minima alias accusantium
+      eveniet vero temporibus, cum architecto incidunt voluptate corporis eaque
+      inventore aliquid? Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Cum a ratione quod ex, excepturi ab omnis, veniam est laboriosam ut
+      officia adipisci, architecto nihil. Optio commodi velit ea provident
+      incidunt.
+    </p>
+  </span>
+</div>
