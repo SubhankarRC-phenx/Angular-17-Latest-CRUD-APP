@@ -15,30 +15,30 @@
   <button
     class="ms-2"
     mat-raised-button
-    routerLink="/about"
+    routerLink="/view"
     [queryParams]="{ feedback: 1 }"
     [fragment]="'headerone'"
-    (click)="scrollToParagraph('paragraphOne')"
+    (click)="scrollToSection('paragraphOne')"
   >
     Headerone
   </button>
   <button
     class="ms-2"
     mat-raised-button
-    routerLink="/about"
+    routerLink="/view"
     [queryParams]="{ feedback: 1 }"
     [fragment]="'headertwo'"
-    (click)="scrollToParagraph('paragraphTwo')"
+    (click)="scrollToSection('paragraphTwo')"
   >
     Headertwo
   </button>
   <button
     class="ms-2"
     mat-raised-button
-    routerLink="/about"
+    routerLink="/view"
     [queryParams]="{ feedback: 1 }"
     [fragment]="'headerthree'"
-    (click)="scrollToParagraph('paragraphThree')"
+    (click)="scrollToSection('paragraphThree')"
   >
     Headerthree
   </button>
@@ -50,11 +50,11 @@
   <span>
     <p
       style="text-decoration: none; cursor: pointer; font-size: 20px"
-      routerLink="/about"
+      routerLink="/view"
       [queryParams]="{ feedback: 1 }"
       [fragment]="'headerone'"
-      (click)="scrollToParagraph('paragraphOne')"
-      #paragraphOne
+      (click)="scrollToSection('paragraphOne')"
+      id="paragraphOne"
     >
       Header one
     </p>
@@ -77,11 +77,11 @@
   <span>
     <p
       style="text-decoration: none; cursor: pointer; font-size: 20px"
-      routerLink="/about"
+      routerLink="/view"
       [queryParams]="{ feedback: 1 }"
       [fragment]="'headertwo'"
-      (click)="scrollToParagraph('paragraphTwo')"
-      #paragraphTwo
+      (click)="scrollToSection('paragraphTwo')"
+      id="paragraphTwo"
     >
       Header two
     </p>
@@ -104,11 +104,11 @@
   <span>
     <p
       style="text-decoration: none; cursor: pointer; font-size: 20px"
-      routerLink="/about"
+      routerLink="/view"
       [queryParams]="{ feedback: 1 }"
       [fragment]="'headerthree'"
-      (click)="scrollToParagraph('paragraphThree')"
-      #paragraphThree
+      (click)="scrollToSection('paragraphThree')"
+      id="paragraphThree"
     >
       Header three
     </p>

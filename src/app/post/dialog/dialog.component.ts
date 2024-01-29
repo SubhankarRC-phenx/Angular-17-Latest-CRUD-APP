@@ -28,7 +28,7 @@ export class DialogComponent implements OnInit {
   @ViewChild('paragraphThree') paragraphThree!: ElementRef;
 
   constructor(
-    private route: ActivatedRoute,
+    private activate_route: ActivatedRoute,
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA)
@@ -39,14 +39,14 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
     // Using button
-    // this.route.params.subscribe((params) => {
-    //   const sectionId = params['section'];
-    //   if (sectionId) {
-    //     this.scrollToSection(sectionId);
-    //   }
-    // });
+    this.activate_route.params.subscribe((params) => {
+      const sectionId = params['section'];
+      if (sectionId) {
+        this.scrollToSection(sectionId);
+      }
+    });
 
-    this.route.fragment.subscribe((fragment) => {
+    this.activate_route.fragment.subscribe((fragment) => {
       if (fragment) {
         // Handle the fragment as needed
         console.log(`Fragment changed: ${fragment}`);
@@ -55,35 +55,35 @@ export class DialogComponent implements OnInit {
   }
 
   // Using button
-  // scrollToSection(sectionId: string): void {
-  //   const element = document.getElementById(sectionId);
-  //   if (element) {
-  //     element.scrollIntoView({
-  //       behavior: 'smooth',
-  //       block: 'start',
-  //       inline: 'nearest',
-  //     });
-  //   }
-  // }
-
-  scrollToParagraph(paragraphId: string): void {
-    let targetParagraph: HTMLElement;
-    switch (paragraphId) {
-      case 'paragraphOne':
-        targetParagraph = this.paragraphOne.nativeElement;
-        break;
-      case 'paragraphTwo':
-        targetParagraph = this.paragraphTwo.nativeElement;
-        break;
-      case 'paragraphThree':
-        targetParagraph = this.paragraphThree.nativeElement;
-        break;
-      default:
-        return;
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
     }
-
-    targetParagraph.scrollIntoView({ behavior: 'smooth' });
   }
+
+  // scrollToParagraph(paragraphId: string): void {
+  //   let targetParagraph: HTMLElement;
+  //   switch (paragraphId) {
+  //     case 'paragraphOne':
+  //       targetParagraph = this.paragraphOne.nativeElement;
+  //       break;
+  //     case 'paragraphTwo':
+  //       targetParagraph = this.paragraphTwo.nativeElement;
+  //       break;
+  //     case 'paragraphThree':
+  //       targetParagraph = this.paragraphThree.nativeElement;
+  //       break;
+  //     default:
+  //       return;
+  //   }
+
+  //   targetParagraph.scrollIntoView({ behavior: 'smooth' });
+  // }
 
   dialogClose() {
     this.dialogRef.close();
