@@ -36,7 +36,7 @@ export class ViewComponent implements OnInit {
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent, {
       // height: '400px',
-      width: '400px',
+      width: '800px',
       data: {
         title: 'Show Dialog',
         scrollToSection: 'paragraphTwo',

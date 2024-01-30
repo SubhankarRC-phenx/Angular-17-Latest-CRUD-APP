@@ -44,6 +44,70 @@
   </button>
 </div>
 
+<div class="container-fluid">
+  <form
+    [formGroup]="newEmployeeForm"
+    (ngSubmit)="onNewEmployeeSubmit()"
+    ngNativeValidate
+  >
+    <div class="row">
+      <div class="col-lg-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="full_name" (keyup)="createAlias()" />
+          <!-- <mat-error
+            *ngIf="
+              this.newEmployeeForm.controls.full_name.hasError('pattern') &&
+              !this.newEmployeeForm.controls.full_name.hasError('required')
+            "
+          >
+            Please enter a valid Name
+          </mat-error>
+          <mat-error
+            *ngIf="this.newEmployeeForm.controls.full_name.hasError('required')"
+          >
+            Father Name is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+      </div>
+
+      <div class="col-lg-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Father Name</mat-label>
+          <input matInput formControlName="father_name" />
+          <!-- <mat-error
+            *ngIf="
+              this.newEmployeeForm.controls.father_name.hasError('pattern') &&
+              !this.newEmployeeForm.controls.father_name.hasError('required')
+            "
+          >
+            Please enter a valid Name
+          </mat-error>
+          <mat-error
+            *ngIf="
+              this.newEmployeeForm.controls.father_name.hasError('required')
+            "
+          >
+            Father Name is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Alias Name</mat-label>
+          <input matInput formControlName="alias_name" readonly />
+        </mat-form-field>
+      </div>
+
+      <div
+        class="col-lg-4 col-md-12 col-sm-4 col-4 align-self-center text-right"
+      >
+        <button mat-raised-button #submit_btn class="btn_sumbit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 <!-- <div style="margin-top: 30px"></div> -->
 <div style="max-height: 35vh; overflow: auto; padding: 10px">
   <br />
