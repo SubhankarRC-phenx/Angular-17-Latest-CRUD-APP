@@ -39,6 +39,7 @@ import {
   styleUrl: './dialog.component.scss',
 })
 export class DialogComponent implements OnInit {
+  value = 'Clear me';
   @ViewChild('paragraphOne') paragraphOne!: ElementRef;
   @ViewChild('paragraphTwo') paragraphTwo!: ElementRef;
   @ViewChild('paragraphThree') paragraphThree!: ElementRef;

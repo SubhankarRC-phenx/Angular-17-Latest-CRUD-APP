@@ -26,7 +26,7 @@ export class ViewComponent implements OnInit {
   ngOnInit(): void {
     this.query_params_subscriber$ = this.route.queryParams.subscribe(
       (params) => {
-        if (params['feedback'] === '1') {
+        if (params['feedback'] === '2') {
           this.openDialog();
         }
       }
